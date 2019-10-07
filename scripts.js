@@ -129,3 +129,13 @@ const isEveryE = inventors.every(name => {
 })
 console.log(isEveryE);
 
+const findMidleName = inventors.find(inventor => {
+    const nameSplit = inventor.split(" ");
+    if(nameSplit.length > 2) return inventor;
+})
+console.log(findMidleName);
+
+const inventors2 = inventors;
+const removeMidleName = inventors2.findIndex(inventor => findMidleName === inventor);
+inventors2.splice(removeMidleName, 1);
+console.log(inventors2);
